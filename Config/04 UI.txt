@@ -1,0 +1,150 @@
+MSG  | Configuring UI...
+
+MSG  | - Configuring Ease Of Access
+REG  | HKCU:\SOFTWARE\Microsoft\Ease of Access | selfvoice | dword | 0
+REG  | HKCU:\SOFTWARE\Microsoft\Ease of Access | selfscan | dword | 0
+REG  | HKCU:\Control Panel\Accessibility\Keyboard Response | Flags | string | 122
+REG  | HKCU:\Control Panel\Accessibility\MouseKeys | Flags | string | 58
+REG  | HKCU:\Control Panel\Accessibility\StickyKeys | Flags | string | 506
+REG  | HKCU:\Control Panel\Accessibility\ToggleKeys | Flags | string | 58
+
+MSG  | - Customising Windows Explorer Settings
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer | ShowDriveLettersFirst | dword | 0
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer | EnableAutoTray | dword | 0
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced | LaunchTo | dword | 1
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced | Hidden| dword | 1
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced | HideDrivesWithNoMedia | dword | 0
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced | HideFileExt | dword | 0
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced | HideMergeConflicts | dword | 0
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced | ShowSuperHidden| dword | 0
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced | SeparateProcess| dword | 1
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced | ShowEncryptCompressedColor | dword | 1
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced | ShowPreviewHandlers| dword | 1
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced | SharingWizardOn | dword | 0
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced | NavPaneExpandToCurrentFolder | dword | 1
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced | NavPaneShowAllFolders | dword | 1
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced | TaskbarGlomLevel | dword | 2 
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced | ShowInfoTip | dword | 0
+
+MSG  | - Hiding Search Box In Taskbar
+REG  | HKCU:\Software\Microsoft\Windows\CurrentVersion\Search | SearchboxTaskbarMode | dword | 0
+
+MSG  | - Turning Off Tips & Tricks And Suggestions
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\CloudContent | DisableWindowsSpotlightFeatures| dword | 1
+
+MSG  | - Configuring Screensaver
+REG  | HKCU:\Control Panel\Desktop | ScreenSaveActive | string | 1
+REG  | HKCU:\Control Panel\Desktop | SCRNSAVE.EXE | string | C:\\Windows\\system32\\scrnsave.scr
+REG  | HKCU:\Control Panel\Desktop | LockScreenAutoLockActive| string | 1
+REG  | HKCU:\Control Panel\Desktop | ScreenSaveTimeOut| string | 600
+REG  | HKCU:\Control Panel\Desktop | ScreenSaverIsSecure| string | 1
+
+MSG  | - Customising Colour Settings
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\DWM | ColorPrevalence | dword | 1
+
+MSG  | - Turning Off Typing Autocorrection
+REG  | HKCU:\SOFTWARE\Microsoft\TabletTip\1.7 | EnableAutocorrection | dword | 0
+
+MSG  | - Customising Regional Settings
+REG  | HKCU:\Control Panel\International | sThousand | string | " "
+REG  | HKCU:\Control Panel\International | sMonThousandSep | string | " "
+
+MSG  | - Configuring System Sounds
+REG  | HKCU:\AppEvents\Schemes | (Default) | string | .None
+REG  | HKCU:\AppEvents\Schemes\Names\.None | (Default) | String | No Sounds
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\.Default\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\.Default\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\AppGPFault\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\AppGPFault\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\CCSelect\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\CCSelect\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\ChangeTheme\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\ChangeTheme\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Close\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Close\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\CriticalBatteryAlarm\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\CriticalBatteryAlarm\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\DeviceConnect\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\DeviceConnect\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\DeviceDisconnect\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\DeviceDisconnect\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\DeviceFail\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\DeviceFail\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\FaxBeep\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\FaxBeep\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\LowBatteryAlarm\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\LowBatteryAlarm\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\MailBeep\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\MailBeep\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Maximize\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Maximize\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\MenuCommand\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\MenuCommand\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\MenuPopup\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\MenuPopup\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\MessageNudge\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\MessageNudge\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Minimize\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Minimize\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Notification.Default\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Notification.Default\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Notification.IM\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Notification.IM\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Notification.Mail\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Notification.Mail\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Notification.Proximity\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Notification.Proximity\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Notification.Reminder\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Notification.Reminder\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Notification.SMS\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Notification.SMS\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Open\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\Open\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\PrintComplete\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\PrintComplete\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\ProximityConnection\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\ProximityConnection\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\RestoreDown\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\RestoreDown\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\RestoreUp\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\RestoreUp\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\ShowBand\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\ShowBand\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\SystemAsterisk\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\SystemAsterisk\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\SystemExclamation\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\SystemExclamation\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\SystemHand\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\SystemHand\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\SystemNotification\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\SystemNotification\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\SystemQuestion\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\SystemQuestion\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\WindowsUAC\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\.Default\WindowsUAC\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\Explorer\ActivatingDocument\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\Explorer\ActivatingDocument\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\Explorer\BlockedPopup\.current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\Explorer\BlockedPopup\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\Explorer\EmptyRecycleBin\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\Explorer\EmptyRecycleBin\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\Explorer\FeedDiscovered\.current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\Explorer\FeedDiscovered\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\Explorer\MoveMenuItem\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\Explorer\MoveMenuItem\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\Explorer\Navigating\.Current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\Explorer\Navigating\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\Explorer\SecurityBand\.current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\Explorer\SecurityBand\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\sapisvr\DisNumbersSound\.current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\sapisvr\DisNumbersSound\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\sapisvr\HubOffSound\.current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\sapisvr\HubOffSound\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\sapisvr\HubOnSound\.current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\sapisvr\HubOnSound\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\sapisvr\HubSleepSound\.current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\sapisvr\HubSleepSound\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\sapisvr\MisrecoSound\.current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\sapisvr\MisrecoSound\.None | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\sapisvr\PanelSound\.current | (Default) | String | ""
+REG  | HKCU:\AppEvents\Schemes\Apps\sapisvr\PanelSound\.None | (Default) | String | "" 
