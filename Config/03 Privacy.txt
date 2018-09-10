@@ -1,0 +1,108 @@
+MSG  | Configuring Privacy Settings...
+
+MSG  | - Disabling Location Services (Location Platform)
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\LocationAndSensors | DisableLocation | dword | 1
+
+MSG  | - Disabling Timeline
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\System | EnableActivityFeed | dword | 0
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\System | PublishUserActivities | dword | 0
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\System | UploadUserActivities | dword | 0
+
+MSG  | - Disabling System And Application Telemetry
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection | AllowTelemetry | dword | 1
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\AppCompat | AITEnable | dword | 0
+
+MSG  | - Stopping And Disabling Privacy-Invading Services
+CALL | RemovePrivacyServices.ps1
+
+MSG  | - Disabling Advertising ID
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo | Enabled | dword | 0
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\AdvertisingInfo | DisabledByGroupPolicy | dword | 1
+
+MSG  | - Disabling Feedback
+REG  | HKCU:\Software\Microsoft\Siuf\Rules | NumberOfSIUFInPeriod | dword | 0
+REG  | HKCU:\Software\Microsoft\Siuf\Rules | PeriodInNanoSeconds | dword | 0
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection | DoNotShowFeedbackNotifications | dword | 1
+
+MSG  | - Disabling Error Reporting
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Error Reporting | Disabled | dword | 1
+
+MSG  | - Disabling Customer Experience Program
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\SQMClient\Windows | CEIPEnable | dword | 0
+
+MSG  | - Disabling Disabling Save To OneDrive By Default
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\OneDrive | DisableLibrariesDefaultSaveToOneDrive | dword | 0
+
+MSG  | - Disabling Cortana And Configuring Search
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search | AllowCortana | dword | 0
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search | AllowCortanaAboveLock | dword | 0
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search | AllowSearchToUseLocation | dword | 0
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search | DisableWebSearch | dword | 1
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search | ConnectedSearchUseWeb | dword | 0
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search | ConnectedSearchUseWebOverMeteredConnections | dword | 0
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\Windows Search | ConnectedSearchPrivacy | dword | 3
+# Taskbar search
+REG  | HKCU:\Software\Microsoft\Windows\CurrentVersion\Search | BingSearchEnabled | dword | 0
+REG  | HKCU:\Software\Microsoft\Windows\CurrentVersion\Search | HistoryViewEnabled| dword | 0
+REG  | HKCU:\Software\Microsoft\Windows\CurrentVersion\Search | DeviceHistoryEnabled | dword | 0
+# Ink & getting to know you
+REG  | HKLM:\Software\Policies\Microsoft\InputPersonalization | RestrictImplicitInkCollection | dword | 1
+REG  | HKCU:\Software\Microsoft\InputPersonalization\TrainedDataStore | HarvestContacts | dword | 0
+REG  | HKLM:\SOFTWARE\Microsoft\Speech_OneCore\Preferences | ModelDownloadAllowed | dword | 0
+
+MSG  | - Turning Off Sync With Other Devices
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\LooselyCoupled | Value | string | Deny
+
+MSG  | - Turning Off Shared Experiences
+REG  | HKCU:\Software\Microsoft\Windows\CurrentVersion\CDP | CdpSessionUserAuthzPolicy | dword | 1
+REG  | HKCU:\Software\Microsoft\Windows\CurrentVersion\CDP | RomeSdkChannelUserAuthzPolicy | dword | 0
+
+MSG  | - Turning Off User Experience Virtualisation
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\UEV\Agent | Enabled | dword | 0
+
+MSG  | - Turning Off Projection To This Device
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\Connect | AllowProjectionToPC | dword | 0
+
+MSG  | - Configuring Windows Defender And Security
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows Defender\Spynet | SubmitSamplesConsent | dword | 0
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\MRT | DontReportInfectionInformation | dword | 1
+
+MSG  | - Disabling SmartScreen
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer\PhishingFilter | EnabledV9 | dword | 0
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\System | EnableSmartScreen | dword | 0
+REG  | HKLM:\Software\Microsoft\Windows\CurrentVersion\Explorer | SmartScreenEnabled | string | Off
+REG  | HKCU:\Software\Microsoft\Windows\CurrentVersion\AppHost | EnableWebContentEvaluation | dword | 0
+
+MSG  | - Configuring Edge
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main | Use FormSuggest | string | no
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main | DoNotTrack| dword | 1
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main | FormSuggest Passwords | string | no
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\MicrosoftEdge\SearchScopes| ShowSearchSuggestionsGlobal | dword | 0
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\MicrosoftEdge\SearchScopes| AllowWebContentOnNewTabPage| dword | 0
+
+MSG  | - Configuring General Application Privacy Settings
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy | LetAppsAccessAccountInfo | dword | 2
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy | LetAppsAccessCallHistory | dword | 2
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy | LetAppsAccessMessaging | dword | 2
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy | LetAppsAccessPhone | dword | 2
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy | LetAppsAccessRadios | dword | 2
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy | LetAppsSyncWithDevices | dword | 2
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy | LetAppsAccessMotion | dword | 2
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy | LetAppsRunInBackground | dword | 2
+
+MSG  | - Disabling Recent Documents And History
+REG  | HKCU:\SOFTWARE\Policies\Microsoft\Windows\Explorer | DisableSearchBoxSuggestions | dword | 1
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer | ClearRecentDocsOnExit | dword | 1
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer | NoRecentDocsHistory | dword | 1
+REG- | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search\JumplistData | Microsoft.Windows.Explorer 
+REG- | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Search\JumplistData | Microsoft.Windows.Explorer_RecentFiles
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer | ShowFrequent | dword | 0
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced | Start_TrackProgs | dword | 0
+REG  | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced | Start_TrackDocs | dword | 0
+
+MSG  | - Disabling Other Devices Continuing Experiences On This Device
+REG  | HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\SmartGlass | UserAuthPolicy | dword | 0
+
+MSG  | - Disabling User Data Sync
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\SettingSync | DisableSettingSync | dword | 2
+REG  | HKLM:\SOFTWARE\Policies\Microsoft\Windows\SettingSync | DisableSettingSyncUserOverride | dword | 1
