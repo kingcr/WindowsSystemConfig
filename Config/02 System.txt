@@ -1,0 +1,117 @@
+MSG | Configuring System...
+
+MSG | - Disabling Remote Assistance
+REG | HKLM:\System\CurrentControlSet\Control\Remote Assistance | fAllowToGetHelp | dword | 0
+
+MSG | - Enabling Powershell Script Execution
+REG | HKCU:\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell | ExecutionPolicy | string | RemoteSigned
+
+MSG | - Configuring Windows Update
+REG | HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate | ExcludeWUDriversInQualityUpdate | dword | 1
+
+MSG | - Configuring Windows Store Auto Update
+REG | HKLM:\SOFTWARE\Policies\Microsoft\WindowsStore | AutoDownload | dword | 2
+
+MSG | - Disabling Automatic Updates For Maps
+REG | HKLM:\SOFTWARE\Policies\Microsoft\Windows\Maps| AutoDownloadAndUpdateMapData | dword | 0
+REG | HKLM:\SOFTWARE\Policies\Microsoft\Windows\Maps| AllowUntriggeredNetworkTrafficOnSettingsPage | dword | 0
+
+MSG | - Forcing DEP For HTML Help
+REG | HKLM:\SOFTWARE\Policies\Microsoft\Windows\System | DisableHHDEP | dword | 0
+
+MSG | - Disabling GameDVR
+REG | HKLM:\SOFTWARE\Policies\Microsoft\Windows\GameDVR | AllowgameDVR | dword | 0
+
+MSG | - Disabling Manufacturer Apps And Icon Downloads For Devices
+REG | HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching | SearchOrderConfig | dword | 1
+REG | HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata | PreventDeviceMetadataFromNetwork | dword | 1
+
+MSG | - Configuring Bitlocker
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | EncryptionMethodWithXtsOs | dword | 6
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | EncryptionMethodWithXtsFdv | dword | 6
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | EncryptionMethodWithXtsRdv | dword | 6
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | OSHardwareEncryption | dword | 0
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | OSAllowSoftwareEncryptionFailover | dword | 0
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | OSRestrictHardwareEncryptionAlgorithms | dword | 0
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | UseAdvancedStartup | dword | 1
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | EnableBDEWithNoTPM | dword | 1
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | UseTPM | dword | 2
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | UseTPMPIN| dword | 2
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | UseTPMKey | dword | 2
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | UseTPMKeyPIN | dword | 2
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | FDVHardwareEncryption | dword | 0
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | FDVAllowSoftwareEncryptionFailover | dword | 0
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | FDVRestrictHardwareEncryptionAlgorithms | dword | 0
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | RDVHardwareEncryption| dword | 0
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | RDVAllowSoftwareEncryptionFailover | dword | 0
+REG | HKLM:\SOFTWARE\Policies\Microsoft\FVE | RDVRestrictHardwareEncryptionAlgorithms| dword | 0
+
+MSG | - Disabling Autorun
+REG | HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer | NoDriveTypeAutoRun | dword | 255
+
+MSG | - Disabling Autoplay
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers | DisableAutoplay | dword | 1
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\AutorunINFLegacyArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\CameraAlternate | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\CameraAlternate\ShowPicturesOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\HandleBDBurningOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\HandleCDBurningOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\HandleDVDBurningOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\PlayBluRayOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\PlayCDAudioOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\PlayDVDAudioOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\PlayDVDMovieOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\PlayEnhancedCDOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\PlayEnhancedDVDOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\PlaySuperVideoCDMovieOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\PlayVideoCDMovieOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\StorageOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\AutorunINFLegacyArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\CameraAlternate\ShowPicturesOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\HandleBDBurningOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\HandleCDBurningOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\HandleDVDBurningOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\PlayBluRayOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\PlayCDAudioOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\PlayDVDAudioOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\PlayDVDMovieOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\PlayEnhancedCDOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\PlayEnhancedDVDOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\PlaySuperVideoCDMovieOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\PlayVideoCDMovieOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\StorageOnArrival | @ | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\AutorunINFLegacyArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\CameraAlternate | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\CameraAlternate\ShowPicturesOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\HandleBDBurningOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\HandleCDBurningOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\HandleDVDBurningOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\PlayBluRayOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\PlayCDAudioOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\PlayDVDAudioOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\PlayDVDMovieOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\PlayEnhancedCDOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\PlayEnhancedDVDOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\PlaySuperVideoCDMovieOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\PlayVideoCDMovieOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\EventHandlersDefaultSelection\StorageOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\AutorunINFLegacyArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\CameraAlternate\ShowPicturesOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\HandleBDBurningOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\HandleCDBurningOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\HandleDVDBurningOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\PlayBluRayOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\PlayCDAudioOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\PlayDVDAudioOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\PlayDVDMovieOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\PlayEnhancedCDOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\PlayEnhancedDVDOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\PlaySuperVideoCDMovieOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\PlayVideoCDMovieOnArrival | (default) | string | MSTakeNoAction
+REG | HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers\UserChosenExecuteHandlers\StorageOnArrival | (default) | string | MSTakeNoAction
+
+MSG  | - Removing Built-In Features
+CALL | RemoveFeatures.ps1
+
+
+
